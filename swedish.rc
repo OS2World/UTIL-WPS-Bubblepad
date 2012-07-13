@@ -1,0 +1,107 @@
+#ifndef OS2_INCLUDED
+   #include <os2.h>
+#endif
+
+#include "bubblepadres.h"
+
+DEFAULTICON bubblepd.ico
+ICON  ICO_TEMPLATE   "template.ico"
+
+DLGTEMPLATE ID_COLORCHANGE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", ID_COLORCHANGE, 91, 22, 201, 140, NOT FS_DLGBORDER |
+            WS_VISIBLE
+    BEGIN
+        GROUPBOX        "FÑrger och Fonter", CWDLG_COLORGROUPBOX, 7, 24, 168, 86, NOT
+                        WS_GROUP
+        LTEXT           "Klicka pÜ knappen fîr fÑrg - eller fontpaletten."
+                        "
+Tryck <CTRL> under drag och slÑpp fîr att Ñndra textfÑrgen.",
+                        CWDLG_TEXTDEMOFIELD, 15, 34, 95, 61, DT_WORDBREAK
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x000000FFL
+                        PRESPARAMS PP_BACKGROUNDCOLOR, 0x00FFFFFFL
+        PUSHBUTTON      "~FÑrg...", CWDLG_COLORPALETTE, 121, 72, 45, 14
+        PUSHBUTTON      "~Font...", CWDLG_FONTPALETTE, 121, 47, 45, 14
+        PUSHBUTTON      "~èngra", CWDLG_COLORUNDO, 7, 6, 52, 14
+        PUSHBUTTON      "~Standard", CWDLG_COLORSTANDARD, 65, 6, 52, 14
+        PUSHBUTTON      "~HjÑlp", CWDLG_COLORHELP, 123, 6, 52, 14, BS_HELP
+    END
+END
+
+
+
+DLGTEMPLATE ID_BUBBLEENABLE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", ID_BUBBLEENABLE, 91, 22, 201, 161, NOT FS_DLGBORDER |
+            WS_VISIBLE
+    BEGIN
+        LTEXT           "BubbelhjÑlp", IDST_TITLE, 4, 108, 106, 20, DT_VCENTER |
+                        DT_WORDBREAK
+                        PRESPARAMS PP_FONTNAMESIZE, "14.Helv"
+        LTEXT           "fîr Launchpad V1.08", IDST_TITLE2, 4, 92, 153, 17
+                        PRESPARAMS PP_FONTNAMESIZE, "14.Helv"
+        LTEXT           "av C. Wohlgemuth   (C) 1997-2011 ", IDST_AUTHOR, 4, 74, 186,
+                        15
+                        PRESPARAMS PP_FONTNAMESIZE, "12.Helv"
+        CHECKBOX        "  ~Aktivera bubbelhjÑlp  ", CWDLG_ENABLEBUBBLE, 4,
+                        50, 150, 10
+        SPINBUTTON      CWDLG_DELAYSPIN, 70, 27, 40, 12, SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN |
+                        WS_GROUP
+        CTEXT           "Fîrdrîjning: ", IDST_DELAY, 7, 29, 60, 8, DT_VCENTER
+        CTEXT           "ms ", IDST_MS, 115, 29, 20, 8, DT_VCENTER
+        PUSHBUTTON      "~HjÑlp", CWDLG_ENABLEHELP, 101, 6, 40, 14, BS_HELP
+    END
+END
+
+
+
+DLGTEMPLATE ID_OPTIONPAGE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", ID_OPTIONPAGE, 91, 22, 176, 135, NOT FS_DLGBORDER |
+            WS_VISIBLE
+    BEGIN
+        CHECKBOX        "  ~Liten launchpad  ", CWDLG_SMALLSIZE,
+                        9, 92, 162, 10
+        SPINBUTTON      CWDLG_DISTANCESPIN, 105, 69, 35, 12,
+                        SPBS_NUMERICONLY | SPBS_MASTER | WS_GROUP
+        RTEXT           " Distans mellan knappar ", CWDLG_DISTANCETEXT, 7, 71, 89, 8,
+                        DT_VCENTER
+	CHECKBOX        "  ~Ta bort LÜdknappar  ", CWDLG_NODRAWERS,
+                        54, 51, 122, 10
+        CHECKBOX        "  ~ôppna lÜdor under ombootning ", CWDLG_REOPEN,
+                        9, 31, 162, 10
+
+	PUSHBUTTON      "~HjÑlp", CWDLG_SIZEHELP, 70, 6, 40, 14,BS_HELP
+    END
+END
+
+DLGTEMPLATE ID_ACTIONBPAGE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", ID_ACTIONBPAGE, 91, 22, 201, 199, NOT FS_DLGBORDER |
+            WS_VISIBLE
+    BEGIN
+         LTEXT           " VÑlj hÑndelseknappar: ", TBID_ACTIONTEXT, 4, 72, 8,
+                        DT_VCENTER
+	CHECKBOX        "  ~StÑng av  ", CBID_SHUTDOWN,
+                        4, 52, 122, 10
+	CHECKBOX        "  ~LÜs  ", CBID_LOCK,
+                        4, 42, 122, 10
+	CHECKBOX        "  ~Fînsterlista  ", CBID_WINDOWLIST,
+                        4, 32, 122, 10
+        CHECKBOX        " S~îk ", CBID_SEARCH,
+                        4, 22, 162, 10
+	PUSHBUTTON      "~HjÑlp", PBID_ACTIONHELP, 79, 6, 40, 14,BS_HELP
+    END
+END
+
+
+STRINGTABLE
+BEGIN
+ID_BUBBLESTRING "~BubbelhjÑlp"
+ID_NOCOLORPALETTESTRING "Kan inte îppna fÑrgpaletten."
+ID_NOFONTPALETTESTRING "Kan inte îppna fontpaletten."
+ID_SIZESTRING "Storl~ek"
+END
+
+

@@ -1,0 +1,107 @@
+#ifndef OS2_INCLUDED
+   #include <os2.h>
+#endif
+
+#include "bubblepadres.h"
+
+DEFAULTICON bubblepd.ico
+ICON  ICO_TEMPLATE   "template.ico"
+
+DLGTEMPLATE ID_COLORCHANGE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", ID_COLORCHANGE, 91, 22, 201, 140, NOT FS_DLGBORDER | 
+            WS_VISIBLE
+    BEGIN
+        GROUPBOX        "Kleuren en Lettertypen", CWDLG_COLORGROUPBOX, 7, 24, 168, 86, NOT 
+                        WS_GROUP
+        LTEXT           "Klik knop voor Kleuren- of Lettertypenpalet."
+                        " 
+Houdt <CTRL> ingedrukt tijdens het slepen om de tekstkleur aan te passen.", 
+                        CWDLG_TEXTDEMOFIELD, 15, 34, 95, 61, DT_WORDBREAK
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x000000FFL
+                        PRESPARAMS PP_BACKGROUNDCOLOR, 0x00FFFFFFL
+        PUSHBUTTON      "~Kleur...", CWDLG_COLORPALETTE, 121, 72, 45, 14
+        PUSHBUTTON      "~Lettertype...", CWDLG_FONTPALETTE, 121, 47, 45, 14
+        PUSHBUTTON      "~Beginwaarde", CWDLG_COLORUNDO, 7, 6, 52, 14
+        PUSHBUTTON      "Stan~daard", CWDLG_COLORSTANDARD, 65, 6, 52, 14
+        PUSHBUTTON      "~Help", CWDLG_COLORHELP, 123, 6, 52, 14, BS_HELP
+    END
+END
+ 
+
+
+DLGTEMPLATE ID_BUBBLEENABLE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", ID_BUBBLEENABLE, 91, 22, 201, 161, NOT FS_DLGBORDER | 
+            WS_VISIBLE
+    BEGIN
+        LTEXT           "Hulpwolkjes", IDST_TITLE, 4, 108, 106, 20, DT_VCENTER | 
+                        DT_WORDBREAK
+                        PRESPARAMS PP_FONTNAMESIZE, "14.Helv"
+        LTEXT           "voor het Hoofdvenster V1.08", IDST_TITLE2, 4, 92, 153, 17
+                        PRESPARAMS PP_FONTNAMESIZE, "14.Helv"
+        LTEXT           "door C. Wohlgemuth   (C) 1997-2011 ", IDST_AUTHOR, 4, 74, 186, 
+                        15
+                        PRESPARAMS PP_FONTNAMESIZE, "12.Helv"
+        CHECKBOX        "  Hulpwolkjes ~activeren", CWDLG_ENABLEBUBBLE, 4, 
+                        50, 150, 10
+        SPINBUTTON      CWDLG_DELAYSPIN, 70, 27, 40, 12, SPBS_NUMERICONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | 
+                        WS_GROUP
+        CTEXT           "Vertraging: ", IDST_DELAY, 7, 29, 60, 8, DT_VCENTER
+        CTEXT           "ms ", IDST_MS, 115, 29, 20, 8, DT_VCENTER
+        PUSHBUTTON      "~Help", CWDLG_ENABLEHELP, 101, 6, 40, 14, BS_HELP
+    END
+END
+ 
+
+
+DLGTEMPLATE ID_OPTIONPAGE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", ID_OPTIONPAGE, 91, 22, 176, 135, NOT FS_DLGBORDER | 
+            WS_VISIBLE
+    BEGIN
+        CHECKBOX        "  Klein Hoofdven~ster  ", CWDLG_SMALLSIZE, 
+                        9, 92, 162, 10
+        SPINBUTTON      CWDLG_DISTANCESPIN, 105, 69, 35, 12, 
+                        SPBS_NUMERICONLY | SPBS_MASTER | WS_GROUP
+        RTEXT           " Afstand tussen de knoppen ", CWDLG_DISTANCETEXT, 7, 71, 89, 8, 
+                        DT_VCENTER
+	CHECKBOX        "  Lade knoppen ve~rwijderen  ", CWDLG_NODRAWERS, 
+                        54, 51, 122, 10
+        CHECKBOX        " Laden ~openen tijdens herstarten ", CWDLG_REOPEN, 
+                        9, 31, 162, 10
+
+	PUSHBUTTON      "~Help", CWDLG_SIZEHELP, 70, 6, 40, 14,BS_HELP
+    END
+END
+
+DLGTEMPLATE ID_ACTIONBPAGE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", ID_ACTIONBPAGE, 91, 22, 201, 199, NOT FS_DLGBORDER | 
+            WS_VISIBLE
+    BEGIN
+         LTEXT           " Selecteer de actie-knoppen: ", TBID_ACTIONTEXT, 4, 72, 8, 
+                        DT_VCENTER
+	CHECKBOX        "  Af~sluiten  ", CBID_SHUTDOWN, 
+                        4, 52, 122, 10
+	CHECKBOX        "  Vergrende~len  ", CBID_LOCK, 
+                        4, 42, 122, 10
+	CHECKBOX        "  ~Vensterlijst  ", CBID_WINDOWLIST, 
+                        4, 32, 122, 10
+        CHECKBOX        " ~Zoeken ", CBID_SEARCH, 
+                        4, 22, 162, 10
+	PUSHBUTTON      "~Help", PBID_ACTIONHELP, 79, 6, 40, 14,BS_HELP
+    END
+END
+
+
+STRINGTABLE 
+BEGIN
+ID_BUBBLESTRING "~Hulpwolkjes"
+ID_NOCOLORPALETTESTRING "Kleuren palet kan niet geopend worden."
+ID_NOFONTPALETTESTRING "Lettertype palet kan niet geopend worden."
+ID_SIZESTRING "~Afmeting"
+END
+
+

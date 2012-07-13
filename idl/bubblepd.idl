@@ -1,0 +1,159 @@
+
+/*
+ * CWBubblePad.idl:
+ *
+ *
+ */
+
+
+#include <wplnchpd.idl>           // this is SOM for WPLaunchPad
+#include "defines.h"
+
+typedef struct RGB_ {                   // rgb
+    BYTE bBlue;
+    BYTE bGreen;
+    BYTE bRed;
+} RGB;
+
+/*
+   CLASS: CWBubblePad
+
+   CLASS HIERARCHY:
+
+       SOMObject
+         ÀÄÄ WPObject
+               ÀÄÄ WPAbstract
+                     ÀÄÄ WPLaunchPad
+                           ÀÄÄ CWBubblePad
+*/
+
+interface M_CWBubblePad;
+
+interface CWBubblePad : WPLaunchPad
+{
+
+    /*
+     * New instance methods for CWLaunchPad:
+     *
+     */
+    ULONG bpadAddBubbleHelpPage(in HWND hwndNotebook);
+    ULONG bpadAddColorChangePage(in HWND hwndNotebook);
+    ULONG bpadAddOptionPage(in HWND hwndNotebook);
+    ULONG bpadAddActionButtonPage(in HWND hwndNotebook);
+    ULONG bpadQueryHideDrawers();
+    void  bpadSetHideDrawers(in ULONG ulHide);
+#ifdef __SOMIDL__
+  implementation {
+    releaseorder:
+        bpadAddBubbleHelpPage,
+        bpadAddColorChangePage,
+        bpadAddOptionPage,
+        bpadAddActionButtonPage,
+        bpadQueryHideDrawers,
+        bpadSetHideDrawers;
+
+    /*
+     * Class Modifiers:
+     */
+
+    externalprefix = cwbubblepad_;
+    externalstem = cwbubblepad;
+    majorversion = 1;
+    minorversion = 1;
+    filestem = bubblepd;           //# specifies the filestem for sc-generated files
+    metaclass = M_CWBubblePad;
+    dllname = "bubblepd.dll";
+    callstyle = oidl;
+
+    /*
+     * Internal instance variables
+     *
+     */
+    ULONG  delayValue;    /* delay for bubble */
+    ULONG  noDrawers;
+    ULONG  bubbleEnabled;
+    ULONG  smallSizeEnabled;//For sizereducing of Launchpad
+    ULONG  icondistance;// Distance of Launchpadicons from the border 
+    ULONG  ulOpenDrawers;//bit n  indicates open drawer #n
+    ULONG  ulReOpen;
+
+    ULONG  bShutdown;
+
+    BOOL   bLock;
+    BOOL   bWindowList;
+    BOOL   bSearch;
+    RGB    background;
+    RGB    foreground;
+    char   fontName[FONTNAMELENGTH];
+
+    /*
+     * Methods overridden by CWBubblePad:
+     *
+     */
+    wpAddLaunchPadPage2        : override;
+    wpAddSettingsPages         : override;
+    wpOpen                     : override; /*!!!!*/
+    wpQueryActionButtons       : override; /*!!!!*/
+    wpRefreshDrawer            : override;
+    wpRestoreState             : override;
+    wpSaveState                : override;
+    wpSetDrawerHWND            : override;
+    wpSetup                    : override;
+    wpSetupOnce                : override;
+
+#ifdef __PRIVATE__
+
+#endif
+
+  }; // implementation
+#endif /* __SOMIDL__ */
+};
+
+
+interface M_CWBubblePad : M_WPLaunchPad
+{
+
+    /*
+     * New class methods for M_CWBubblePad:
+     *
+     */
+
+
+#ifdef __SOMIDL__
+  implementation {
+
+
+    /*
+     * Class Modifiers:
+     *
+     */
+
+    externalprefix = cwbubblepadM_;
+    externalstem = cwbubblepadM;
+    functionprefix = cwbubblepadM_;
+    majorversion = 1;
+    minorversion = 1;
+    filestem = bubblepd;           //# specifies the filestem for sc-generated files
+    dllname = "bubblepd.dll";
+    callstyle = oidl;
+
+    /*
+     * Internal class variables
+     *
+     */
+
+    /*
+     * Methods overridden
+     *
+     */
+
+    wpclsQueryTitle             : override;
+    wpclsInitData               : override;
+
+  };
+
+#endif /* __SOMIDL__ */
+
+};
+
+

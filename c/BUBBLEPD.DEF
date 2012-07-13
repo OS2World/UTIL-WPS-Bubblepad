@@ -1,0 +1,15 @@
+LIBRARY BUBBLEPD INITGLOBAL
+;Description '$@#(c) Chris Wohlgemuth:1.08#@##1## 18.12.11                ::::0::@@BubblePad: flyover help for the launchpad.'
+
+PROTMODE
+CODE PRELOAD DISCARDABLE
+DATA SHARED LOADONCALL
+
+EXPORTS
+        CWBubblePadClassData
+        CWBubblePadCClassData
+        CWBubblePadNewClass
+        M_CWBubblePadClassData
+        M_CWBubblePadCClassData
+        M_CWBubblePadNewClass
+

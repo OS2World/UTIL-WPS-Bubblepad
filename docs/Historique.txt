@@ -1,0 +1,75 @@
+18.12.2011 V1.08:
+Use of PNG icons if WPS-Wizard (http://svn.netlabs.org/wps-wizard) is installed
+Dutch translation thanks to Jan van der Heide
+Swedish translation thanks to Bj"orn S"oderstr"om
+French translation thanks to Guillaume Gay
+
+18.06.2004 V1.07 : 
+
+Correction du plantage sur eCS version 1.1 et sup‚rieures. 
+Cliquer sur le bouton "Arrˆt" invoque … pr‚sent la boŒte de dialogue de confirmation du systŠme. 
+Renommage de la classe en CWBubblePad. 
+R‚‚criture de la classe en C pur. Plus de Direct-to-SOM de maniŠre … ce que la compilation avec n'importe quel compilateur C soit possible. 
+BoŒtes de dialogue des paramŠtres retravaill‚es. 
+Changement du style de licence pour celui de BSD. 
+Bubblepd.dll n'a plus … ˆtre dans l'un des chemins de LIBPATH. 
+
+26.10.03 V1.06 : 
+
+Les noms de m‚thodes Bubblepad ‚taient corrompus. 
+Correction de fuites de m‚moire mineures. 
+Les modŠles prennent … pr‚sent la forme de modŠles. Pour les mini-ic“nes il y a une petite marque. 
+Cliquer sur un modŠle fonction comme pr‚vu (comme pour les modŠles normaux). 
+Correction d'erreurs dans la version anglaise. Merci … Peter Weilbacher pour le correctif. 
+
+22.06.2003 V1.05 : 
+
+Les exportations de M_WPLnchCWClassData, M_WPLnchCWCClassData et M_WPLnchCWNewClass n'‚taient pas d‚finies -> pas de surclassage possible. 
+Les boutons du bloc-notes ne sont pas … la mˆme place sur Warp 4. 
+
+28.12.98 V1.04 (version interne) : 
+
+Correction de bug qui provoquait l'ouverture de BubblePad avec les valeurs par d‚faut lorsque l'entr‚e LAUNCHPAD ‚tait pr‚sente dans la ligne AUTOSTART du CONFIG.SYS. Ce bug a ‚t‚ introduit avec les chaŒnes de paramŠtres de la V1.03. 
+
+15.11.98 V1.03 : 
+
+Nouvelles fonctionnalit‚s : 
+
+Ajout de l'option pour d‚sactiver la r‚ouverture des tiroirs. 
+Ajout de la page d'options pour cacher chacun des boutons d'action. 
+Ajout de chaŒnes de paramŠtres pour faciliter l'automatisation de l'installation. 
+Inclusion d'un utilitaire pour remplacer/restituer la classe WPLaunchPad. 
+
+19.09.98 V1.02: 
+
+Nouvelles fonctionnalit‚s : 
+
+Ajout de la fonction Cacher les boutons de tiroirs. 
+Ajout de paramŠtres individuels pour BubblePads. 
+Ajout de la sauvegarde de l'‚tat des tiroirs. Les tiroirs sont r‚ouverts au prochain d‚marrage du systŠme. Ne fonctionne pas avec l'ouverture/fermeture usuelle. 
+
+Corrections de bugs : 
+
+Correction du positionnement de la fenˆtre d'aide du tableau de bord en haut du bureau. 
+Correction du bugs des r‚f‚rences bris‚es engendrant la disparition de tiroirs. 
+D‚placement du r‚arrangement des boutons de wpRefreshDrawer() vers wpSetDrawerHWND(). Ceci ‚limine le clignotement … l'ouverture des tiroirs. 
+INSTALL.EXE copiait toujours le fichier d'aide en anglais dans les versions pr‚c‚dentes. 
+
+20.08.98 V1.01 : 
+
+Correction du problŠme de fenˆtres d'aide persistantes. Les fenˆtres d'aide sont … pr‚sent toujours correctement d‚truites, mˆme si les tiroirs sont paramŠtr‚s pour de refermer automatiquement. 
+
+18.08.98 V1.00b : 
+
+Correction du positionnement des tiroirs. Les tiroirs sous ou … gauche du tableau de bord ‚taient plac‚s avec un d‚calage par rapport … ce dernier. 
+R‚‚criture des routines de temporisation pour les fenˆtres d'aide. 
+
+16.08.98 V1.00a : 
+
+Correction d'un bug dans INSTALL.EXE qui empˆchait parfois l'acceptation du r‚pertoire d'installation par d‚faut. 
+Contournement de problŠme : la fenˆtre d'aide dynamique reste visible sur certains systŠmes. Lorsque l'aide reste coll‚e sur le bureau, d‚placez le curseur sur un autre bouton pour vous en d‚barrasser. 
+
+25.06.98 V1.00 : 
+
+PremiŠre version publique. 
+

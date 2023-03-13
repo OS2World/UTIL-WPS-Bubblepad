@@ -1,0 +1,347 @@
+BubblePad V 1.08 (c) Chris Wohlgemuth 1997-2011
+-----------------------------------------------
+
+Contenu
+-------
+0. Licence
+
+1. Introduction
+
+2. Installation
+
+2b. Chaånes de paramätrage
+
+3. DÇsinstallation
+
+4. Utilisation
+
+5. Compilation
+
+6. Historique
+
+7. Problämes connus
+
+8. Auteur
+
+9. Traductions
+
+-----------------------------------------
+
+0. Licence
+----------
+Cette distribution est fournie "telle quelle" sous 
+licence de type BSD. 
+Veuillez consulter le fichier 'License' pour plus 
+d'informations. 
+
+
+1. Introduction
+---------------
+Bienvenue sur BubblePad V 1.07, est une classe de 
+remplacement pour le tableau de bord d'OS/2 Warp 3 et Warp 4. 
+Cette nouvelle classe fournit des bulles d'aide pour tous les 
+boutons du tableau de bord. Avec cette fonction il est alors 
+possible de distinguer sur le tableau de bord chacun des 40 
+dossiers du qui prÇsentent tous les màmes icìnes. Vous ne 
+cliquerez plus jamais sur le mauvais bouton. 
+De plus, la classe permet de rÇduire sa taille du tableau de 
+bord en rÇduisant la distance entre les boutons ainsi que la 
+taille des bordures. 
+
+NOUVEAU avec la V1.02 : 
+La nouveautÇ de cette version est l'option permettant de 
+retirer les boutons de tiroirs. Des paramätrages individuels 
+pour des tableaux de bord diffÇrents sont maintenant 
+possibles. Plus de clignotement Ö l'ouverture des tiroirs. 
+L'Çtat des tiroirs est sauvegardÇ Ö l'arràt du systäme. 
+RÇouverture au lancement du systäme. 
+
+NOUVEAU avec la V1.03 : 
+Voir le fichier Historique. 
+
+(La V1.04 n'a jamais ÇtÇ distribuÇe au grand public)
+
+NOUVEAU avec les V1.05 et supÇrieures :
+Voir le fichier Historique. 
+
+Une aide en ligne compläte est fournie, mais je ne pense pas 
+que vous en ayez rÇellement besoin. 
+Toutes les fonctionnalitÇs sont sÇlectionnables; 
+
+La distribution contient les versions allemande, anglaise et 
+franáaise de la DLL et du fichier d'aide. Vous pouvez traduire 
+le fichier de ressource et les chaånes de texte du fichier 
+'inst.cpp' et le compiler. 
+Si vous me faites parvenir les traduction, je les rassemblerai 
+et mes compilerai dans une nouvelle distribution. 
+
+Vous pouvez trouver BubblePad sur ces pages WWW : 
+
+   http://svn.netlabs.org/bubblepad
+
+
+2. Installation
+---------------
+DÇcompressez les fichiers dans un dossier de votre choix,
+mais assurez-vous de conserver la structure des rÇpertoires ! 
+
+La distribution contient les fichiers suivants : 
+
+G:\svn-sources\bubblepad\trunk\bubblepad_v108.txt
+G:\svn-sources\bubblepad\trunk\FILE_ID.DIZ               courte description du programme
+G:\svn-sources\bubblepad\trunk\install.CMD               script d'installation
+G:\svn-sources\bubblepad\trunk\LisezMoi                  ce que vous àtes en train de faire
+G:\svn-sources\bubblepad\trunk\README                    fichier LiserMoi en anglais
+G:\svn-sources\bubblepad\trunk\uninstall.CMD             script de dÇsinstallation
+G:\svn-sources\bubblepad\trunk\bin\lpreplace.exe         Utilitaire pour remplacer WPLaunchPad
+G:\svn-sources\bubblepad\trunk\Deutsch\bubblepd.dll
+G:\svn-sources\bubblepad\trunk\Deutsch\bubblepd.hlp         
+G:\svn-sources\bubblepad\trunk\Docs\CHANGES              Historique des versions en anglais
+G:\svn-sources\bubblepad\trunk\Docs\Historique           Historique des versions en franáais
+G:\svn-sources\bubblepad\trunk\Docs\License
+G:\svn-sources\bubblepad\trunk\English\bubblepd.dll
+G:\svn-sources\bubblepad\trunk\English\bubblepd.hlp
+G:\svn-sources\bubblepad\trunk\Francais\bubblepd.dll
+G:\svn-sources\bubblepad\trunk\Francais\bubblepd.hlp
+G:\svn-sources\bubblepad\trunk\Nederlands\bubblepd.dll
+G:\svn-sources\bubblepad\trunk\Nederlands\bubblepd.hlp
+G:\svn-sources\bubblepad\trunk\SOURCE\c
+G:\svn-sources\bubblepad\trunk\SOURCE\hlp
+G:\svn-sources\bubblepad\trunk\SOURCE\idl
+G:\svn-sources\bubblepad\trunk\SOURCE\include
+G:\svn-sources\bubblepad\trunk\SOURCE\obj
+G:\svn-sources\bubblepad\trunk\SOURCE\BUBBLEPD.ICO
+G:\svn-sources\bubblepad\trunk\SOURCE\DEUTSCH.RC
+G:\svn-sources\bubblepad\trunk\SOURCE\ENGLISH.RC
+G:\svn-sources\bubblepad\trunk\SOURCE\FRENCH.RC
+G:\svn-sources\bubblepad\trunk\SOURCE\makefile
+G:\svn-sources\bubblepad\trunk\SOURCE\nederlands.RC
+G:\svn-sources\bubblepad\trunk\SOURCE\swedish.rc
+G:\svn-sources\bubblepad\trunk\SOURCE\template.ICO
+G:\svn-sources\bubblepad\trunk\SOURCE\c\bubblepd.c
+G:\svn-sources\bubblepad\trunk\SOURCE\c\BUBBLEPD.DEF
+G:\svn-sources\bubblepad\trunk\SOURCE\c\lpreplace.cpp
+G:\svn-sources\bubblepad\trunk\SOURCE\c\makefile
+G:\svn-sources\bubblepad\trunk\SOURCE\c\misc_funcs.c
+G:\svn-sources\bubblepad\trunk\SOURCE\hlp\bubblepddeutsch.ipf
+G:\svn-sources\bubblepad\trunk\SOURCE\hlp\bubblepdenglish.ipf
+G:\svn-sources\bubblepad\trunk\SOURCE\hlp\bubblepdfrench.ipf
+G:\svn-sources\bubblepad\trunk\SOURCE\hlp\bubblepdnederlands.ipf
+G:\svn-sources\bubblepad\trunk\SOURCE\hlp\bubblepdswedish.ipf
+G:\svn-sources\bubblepad\trunk\SOURCE\idl\bubblepd.idl
+G:\svn-sources\bubblepad\trunk\SOURCE\include\bubblepadres.h
+G:\svn-sources\bubblepad\trunk\SOURCE\include\defines.h
+G:\svn-sources\bubblepad\trunk\Svenska\bubblepd.dll
+G:\svn-sources\bubblepad\trunk\Svenska\bubblepd.hlp
+
+
+AVANT TOUTE CHOSE, EFFECTUEZ UNE COPIE DE SAUVEGARDE DE VOS 
+FICHIERS INI !!! 
+Je ne pense pas que cela soit rÇellement nÇcessaire, mais lors
+de l'installation le programme enregistre des nouvelles classes WPS 
+et c'est toujours une bonne idÇe de conserver une sauvegarde des 
+fichiers INI si quelque chose tourne mal. Vous le savez bien : Murphy 
+ne se repose jamais... 
+
+Si vous avec une version prÇcÇdente de BubblePad installÇe, 
+dÇsinstallez-la en premier lieu puis relancez le bureau Çlectronique. 
+
+DÇplacez le rÇpertoire avec le contenu de l'archive vers l'emplacement 
+adÇquat. Apräs l'installation, ce rÇpertoire NE pourra PLUS àtre dÇplacÇ 
+puisque le bureau Çlectronique verrouille la DLL de classe de BubblePad. 
+Lancez le script d'installation 'install.cmd'. 
+Apräs l'enregistrement de la nouvelle classe et le remplacement de la 
+classe originale de tableau de bord, vous devez relancer le bureau 
+Çlectronique de maniäre Ö ce que les modifications prennent effet. 
+
+Si vous voulez effectuer une installation personnalisÇe, vous pouvez 
+utiliser REXX avec des chaånes de paramätrage pour les fonctionnalitÇs de 
+BubblePad. Veuillez vous rÇfÇrer Ö la section 2b pour plus 
+d'informations Ö propos des chaånes de paramätrage prises en charge. 
+
+
+2b. Chaånes de paramätrage
+--------------------------
+Avec la version 1.03, les chaånes de paramätrage sont prises en charge 
+pour les fonctionnalitÇs de BubblePad afin de permettre l'installation 
+automatique en utilisant REXX. 
+
+Les chaånes de paramätrage suivantes sont proposÇes : 
+
+LPNODRAWERS=1
+
+   Cache les boutons de tiroirs. Non cachÇs par dÇfaut. 
+
+LPSMALL=0
+
+   DÇsactive le redimensionnement du tableau de bord. 
+   Avec cette option LPNODRAWERS n'a pas d'effet. 
+   Si omise, l'option est ACTIVêE par dÇfaut. 
+
+LPDISTANCE=4-18                  
+
+   Choix de la distance entre les boutons sur le tableau de bord. 
+   La valeur par dÇfaut est 4. 
+
+LPREOPENDRAWERS=1
+
+   Pour dÇfinir si les tiroirs sont rÇouverts au prochain 
+   lancement du systäme. L'option est dÇsactivÇe par dÇfaut. 
+
+LPACTIONBUTTONS=1+2+4+8
+       
+   Activation de chaque bouton d'action. La valeur de la clÇ est 
+   calculÇe en ajoutant les valeurs des boutons d'action : 
+
+   Arràt.............: 1
+   Verrouillage......: 2
+   Liste de fenàtres.: 4
+   Recherche.........: 8
+
+   Exemple :
+            Si vous voulez activer les boutons de verrouillage 
+            et de recherche, utilisez LPACTIONBUTTONS=10 
+            (la clÇ est dÇcimale !). 
+
+   Tous les boutons d'action sont activÇs par dÇfaut. 
+
+LPBUBBLE=0
+
+   DÇsactivation des bulles d'aide. L'option est activÇe par dÇfaut. 
+
+LPDELAY=0-9999
+
+   DÇlai d'affichage pour la fenàtre d'aide. Choisir une valeur entre 
+   0 et 9999ms. La valeur par dÇfaut est 250ms. 
+ 
+LPBGCOLOR=RVB
+
+   Choix de la couleur d'arriäre-plan de la fenàtre d'aide. 
+   La valeur est calculÇe de la maniäre suivante (Rouge, Vert et Bleu) : 
+
+   LPBGCOLOR=65536*R+256*V+B
+
+   Assurez-vous d'utiliser des valeurs dÇcimales. 
+   Jaune pÉle par dÇfaut. 
+
+LPFGCOLOR=RVB
+
+   Choix de la couleur du texte pour la fenàtre d'aide. 
+   La valeur est calculÇe de la maniäre suivante (Rouge, Vert et Bleu) : 
+
+   LPFGCOLOR=65536*R+256*V+B
+
+   Be sure to use a decimal value. 
+   Noir par dÇfaut. 
+
+
+Voici un exemple d'utilisation de chaånes de paramätrage : 
+
+------------------------------------------------
+/* rexx - crÇation de BubblePad */
+
+call RxFuncAdd 'SysCreateObject','RexxUtil', 'SysCreateObject'
+
+IF SYSCreateObject("WPLnchCW","Setup-Test","<WP_DESKTOP>","LPACTIONBUTTONS=8;LPNODRAWERS=1;LPREOPENDRAWERS=1","replace") THEN
+   Say 'OK. Votre nouveau tableau de bord a ÇtÇ crÇÇ. '
+------------------------------------------------
+
+Cet exemple crÇe un nouveau BubblePad avec uniquement le bouton de 
+recherche. Les boutons de tiroirs sont cachÇs et les tiroirs sont 
+rÇouvert au prochain lancement du systäme. 
+Ce script fonctionne màme si vous n'avez pas remplacÇ la classe 
+WPLaunchPad par celle de BubblePad WPLnchCW. Si le remplacement 
+est effectuÇ, vous pouvez utiliser WPLaunchPad comme nom de classe. 
+
+
+3. DÇsinstallation
+------------------
+Lancez le script de dÇsinstallation (uninstall.CMD). 
+Le script rÇtablit WPLaunchPad et dÇsenregistre la classe. 
+Vous devez rÇamorcer le systäme pour achever la dÇsinstallation. 
+
+
+4. Utilisation
+--------------
+La nouvelle classe insäre quatre pages dans le bloc-notes des 
+paramätres. Deux pages sont dÇdiÇes Ö la personnalisation des 
+bulles d'aide. Il est possible d'y choisir les couleurs de la 
+bulle et de la police, ainsi que la police elle-màme. Le dÇlai 
+est aussi modifiable. La modification des couleurs et police 
+est faite en utilisant les palettes de couleur et de police 
+du dossier "Configuration du systäme". Vous pouvez les ouvrir 
+directement depuis le bloc-notes des paramätres en cliquant sur 
+les boutons appropriÇs. 
+Sur la troisiäme page d'options, vous pouvez dÇsactiver chaque 
+bouton d'action. 
+Une autre page d'options vous permet de choisir si vous voulez 
+rÇduire la taille du tableau de bord et/ou ajuster la distance 
+entre les boutons. 
+Vous avez une otpion pour retire les boutons de tiroirs depuis 
+les versions 1.02 et supÇrieures. Tous les paramätres sont 
+individuels pour chaque tableau de bord du systäme. 
+
+Une aide en ligne compläte est fournie pour chacune des nouvelles 
+pages d'option. 
+
+
+5. Compilation
+------------
+Le code source complet est fourni dans cette distribution. Pour 
+la compilation de la classe de remplacement, vous aurez besoin de 
+VAC++3.08 et du Toolkit de Warp 3 (tous les deux des produits 
+commerciaux d'IBM). D'autres compilateurs C peuvent fonctionner 
+mais le Toolkit est tout de màme requis Ö cause du compilateur 
+SOM. 
+Vous aurez en outre besoin de GNU make et des utilitaires de fichiers 
+GNU (Gnu file utilities) pour rm.exe. 
+Vous aurez peut-àtre aussi besoin d'un shell compatible unix tel que 
+ash.exe, ksh.exe ou bash. 
+
+Il est supposÇ ici que le compilateur est correctement installÇ. 
+
+1. CD dans le rÇpertoire des sources, 
+4. lancez 'make' - l'utilitaire Gnu make - et c'est tout. 
+
+Lancez 'make clean' dans le rÇpertoire source pour supprimer tous les 
+fichiers temporaires. 
+
+
+6. Historique
+-------------
+Voir le fichier 'Historique'. 
+
+
+7. Problämes connus
+-------------------
+Avec OS/2 Warp 4 (sans correctif), le WPS ne se charge parfois pas. 
+Il charge le papier-peint et s'arràte avec le pointeur horloge. 
+C'est le màme probläme connu que pour le Warpcenter. Essayez d'appliquer 
+un correctif pour rÇsoudre le probläme du Warpcenter ou pour contourner 
+ce probläme, ajoutez la ligne SET RESTARTOBJECTS=NO dans votre fichier 
+CONFIG.SYS. Et retirez l'occurence LAUNCHPAD de la ligne AUTOSTART. 
+
+L'Çtat des tiroirs ouverts n'est sauvegardÇ qu'Ö l'arràt du systäme. 
+Les tiroirs ne sont donc pas rÇouverts lorsque le tableau de bord est 
+fermÇ puis rÇouvert. 
+
+L'affichage des modäles sur le tableau de bord n'est pas encore parfait. 
+Des clignotements peuvent se produire. 
+
+
+8. Auteur
+---------
+(c) Chris Wohlgemuth 1997-2011
+
+Vous pouvez trouver BubblePad sur les pages WWW suivantes : 
+
+   http://svn.netlabs.org/bubblepad
+
+
+Si vous m'envoyez vos amÇliorations ou traductions, je les incorporerai 
+dans le prochaine distribution. 
+
+9. Traductions
+--------------
+Traduction franáaise rÇalisÇe par Guillaume Gay <guillaume.gay@bigfoot.com>. 
+

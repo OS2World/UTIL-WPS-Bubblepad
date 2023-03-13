@@ -1,0 +1,25 @@
+                          Upload Information Template for Hobbes.nmsu.edu
+                          ===============================================
+
+        Archive Filename: bubblepad_v108.zip
+       Short Description: Bubblepad is a replacement class for the launchpad of Warp3/4. Flyover help for the buttons, reducing of the pad size by reordering of the buttons. Option to hide the drawer buttons. English, dutch, swedish, french and german version. PNG icons when used with WPS-Wizard.
+        Long Description: Bubblepad is a replacement class for the launchpad of Warp3/4. It offers flyover help for the buttons and reduces the size of the pad by reordering of the buttons. Option to also hide the drawer buttons. Support for templates on the pad. Bubblepad fits seamlessly into the WPS. Full online help is provided. NLS for german, dutch, swedish, french and english. PNG icons are used when WPS-Wizard (http://svn.netlabs.org/wps-wizard) is installed. This package is released under a BSD style license. Full source code is provided.
+
+      Proposed directory
+           for placement: /pub/os2/util/wps
+
+               Your name:  Chris Wohlgemuth
+           Email address: See http://svn.netlabs.org/bubblepad/wiki
+    Program contact name: (same)
+   Program contact email: (same)
+             Program URL: http://svn.netlabs.org/bubblepad/wiki 
+
+      Would you like the
+   contact email address
+    included in listings? yes
+
+Operating System/Version: Warp 3 and above, eCS
+ Additional requirements: 
+
+                Replaces: (none)
+

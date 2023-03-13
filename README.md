@@ -8,8 +8,7 @@ BSD 3 Clause (alike) ---
 
 COMPILE TOOLS
 =============
-*
-* 
+* ICC compiler
 
 AUTHORS
 =============

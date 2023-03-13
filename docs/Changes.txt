@@ -1,0 +1,74 @@
+------------------------------------------------------------------------------
+                                          BubblePad changes
+------------------------------------------------------------------------------
+18.12.2011 V1.08:
+-Use of PNG icons if WPS-Wizard (http://svn.netlabs.org/wps-wizard) is installed
+-Dutch translation thanks to Jan van der Heide
+-Swedish translation thanks to Bj"orn S"oderstr"om
+-French translation thanks to Guillaume Gay
+
+18.06.2004 V1.07:
+-Fixed crash on eCS 1.1 and higher.
+-Clicking 'Shutdown' action button now invokes the system confirmation dialog.
+-Renamed class to CWBubblePad
+-Rewritten class to plain C. No more Direct-to-SOM so compilation with any C-compiler
+ should be possible.
+-Reworked settings dialogs.
+-Changed license to BSD style.
+-Bubblepd.dll must not be in the libpath anymore.
+
+26.10.03 V1.06:
+-BubblePad method names were mangled.
+-Fixed some minor memory leaks.
+-Templates are painted as templates now. For mini icons there's a small mark.
+-Clicking on templates works as intended (like normal templates).
+-Corrected some errors in the english NLV. Thanks to Peter Weilbacher for the patch.
+                 
+22.06.2003 V1.05
+-Export of M_WPLnchCWClassData, M_WPLnchCWCClassData and M_WPLnchCWNewClass
+ wasn't defined. -> No subclassing possible
+-Notebook buttons are moved on Warp 4
+
+ 28.12.98 V1.04 (internal version)
+-Bug corrected which caused opening of bubblepad with default values when LAUNCHPAD
+ entry was present in AUTOSTART line of the config.sys. This bug was introduced with the
+ setup strings of V1.03.
+
+15.11.98 V1.03
+New features:
+-Option to disable reopening of drawers added.
+-Option to remove each action button added.
+-Setup strings added to ease automatic installation.
+-Utility included to replace/unreplace the WPLaunchPad class
+
+19.09.98 V1.02:
+New features:      
+-Hide drawer button feature added.                          
+-Individual settings for BubblePads added.                                  
+-Added saving of drawer state. Drawers are reopened on next reboot. Doesn't work with normal open/close 
+                   
+Fixed bugs:
+-Positioning of help windows for launchpad at the top of the desktop corrected.
+-Bug with broken references causing drawers to disapear fixed.                
+-Moved button reordering from wpRefreshDrawer() to wpSetDrawerHWND(). This eliminates the flickering when opening drawers.   
+-Install.exe always copied the english help-file in previous versions.
+
+20.08.98 V1.01:
+-Corrected stucking help window problem. Help windows are always properly destroyed now, even
+ if drawers are set to autoclose.
+
+18.08.98 V1.00b: 
+-Corrected positioning of drawers. Drawers below or on the left of the launchpad were placed       
+ with an offset to the launchpad.
+-Timer routines for the help windows rewritten.       
+
+16.08.98 V1.00a:
+
+-Corrected bug in install.exe which sometimes prevented accepting of default installation directory.
+-Workaround: fly over help window on some systems remains visible. When help stucks on the
+ desktop move pointer over another button to get rid of it.                   
+
+20.06.98 V1.00:
+
+-First public version.
+

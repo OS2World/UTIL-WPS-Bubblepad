@@ -1,0 +1,33 @@
+Bubblepad V1.08
+(C) Chris Wohlgemuth 1997-2011
+http://www.os2world.com/cdwriting
+http://www.geocities.com/SiliconValley/Sector/5785/
+
+This version replaces Bubblepad V1.07 and older.
+
+Bubblepad is a replacement class for the
+launchpad of OS/2 Warp 3 and above. It 
+provides bubblehelp for the launchpad buttons.
+Further more you can minimize the launchpad
+size by reducing the button distance. Drawer
+buttons can be removed and disabling of each
+action button is possible.
+Full online help is provided. Full source code
+is included. NLS for german, english, swedish,
+french and dutch.
+
+New in this release:
+
+-Use of PNG icons if WPS-Wizard (http://svn.netlabs.org/wps-wizard) is installed
+-Dutch translation thanks to Jan van der Heide
+-Swedish translation thanks to Bj"orn S"oderstr"om
+-Frensch translation thanks to 
+-French translation thanks to Guillaume Gay
+
+See file CHANGES for full history.
+
+Licence:
+This package is provided 'as is' under a 
+BSD style license.
+All files must be kept together.
+Read the file 'License' for further information.
